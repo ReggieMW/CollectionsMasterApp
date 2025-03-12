@@ -104,6 +104,11 @@ namespace CollectionsMasterConsoleUI
             //TODO: Sort the list then print results
             Console.WriteLine("Sorted Evens!!");
             retiredPlayers.Sort();
+            for (int i = 0; i < retiredPlayers.Count; i++)
+            {
+                if (i % 2 != 0)
+                    retiredPlayers.Remove(retiredPlayers[i]);
+            }
             NumberPrinter(retiredPlayers);
 
             Console.WriteLine("------------------");
@@ -139,15 +144,15 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            foreach (int number in numberList)
+            for (int i = 0; i < numberList.Count; i++)
             {
-                if (number % 2 != 0)
+                if (i % 2 != 0)
                 {
-                    numberList.Remove(number);
+                    numberList.Remove(i);
                 }
                 else
                 {
-                    Console.WriteLine(number);
+                    Console.WriteLine(i);
                 }
             }
         }
