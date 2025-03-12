@@ -104,12 +104,10 @@ namespace CollectionsMasterConsoleUI
             //TODO: Sort the list then print results
             Console.WriteLine("Sorted Evens!!");
             retiredPlayers.Sort();
-            for (int i = 0; i < retiredPlayers.Count; i++)
-            {
-                if (i % 2 != 0)
-                    retiredPlayers.Remove(retiredPlayers[i]);
-            }
-            NumberPrinter(retiredPlayers);
+            OddKiller(retiredPlayers);
+            
+           
+            
 
             Console.WriteLine("------------------");
 
